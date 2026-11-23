@@ -2,6 +2,8 @@
 #define GAME_BATMAN_ARKHAM_KNIGHT 1
 
 #define LUMA_PATCH_BYTECODE_SYNC 1
+// Ignore non DX11 devices in the process (e.g. a DX12 interop device that OptiScaler/AMDNR creates for FSR 4), like the other Luma mods that coexist with other DX12 users
+#define CHECK_GRAPHICS_API_COMPATIBILITY 1
 
 #include "../../../Shaders/Batman Arkham Knight/Includes/GameCBuffers.hlsl"
 #include "..\..\Core\core.hpp"
